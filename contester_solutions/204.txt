@@ -1,0 +1,47 @@
+Problem 204.
+Find and show the result of next expression: "x² + y - z:2", where 'z' is even number.
+
+Input: Three numbers, x, y, z.(order is important)
+Output: Result of "x² + y - z:2" expression.
+
+string code =
+    "create int x;"
+    "create int t;"
+    "create int y;"
+    "create int z;"
+    "create int r;"
+
+    "input x;"
+    "input y;"
+    "input z;"
+    
+    "gre 0 x r;"
+    "if r;"
+        "sub 0 x x;"
+    
+    "add 0 x t;"
+
+    "create int f;"
+    "proc a;"
+        "gre 1 t f;"
+        "if f;"
+            "ret;"
+        "sub t 1 t;"
+        "add x r r;"
+        "exec a;"
+        "ret;"
+    "endproc;"
+
+    "exec a;"
+
+    "add r y r;"
+    "rshi z 1;"
+    "sub r z r;"
+
+    "print r;"
+;
+
+How to run:
+1. Put the code variable into bython.cpp in the start
+2. Compile as C++
+3. Run

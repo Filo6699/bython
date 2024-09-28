@@ -1,0 +1,21 @@
+Problem 202.
+Input two numbers(with space between) and show their sum.
+
+Input: Two numbers.
+Output: Their sum.
+
+Solution
+string code = 
+    "create int a;"
+    "create int b;"
+    "create int c;"
+    "input a;"
+    "input b;"
+    "add a b c;"
+    "print c;"
+;
+
+How to run:
+1. Put the code variable into bython.cpp in the start
+2. Compile as C++
+3. Run

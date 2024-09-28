@@ -1,0 +1,79 @@
+Problem 203.
+Input two numbers(with space between) and show their product.
+
+Input: Two numbers.
+Output: Their product.
+
+string code =
+    "proc b;"
+        "add a s a;"
+        "sub i 1 i;"
+        "gre i 1 g;"
+        "if g;"
+            "exec b;"
+        "ret;"
+    "endproc;"
+
+    "proc e;"
+        "create int y 0;"
+        "gre b 1 y;"
+        "if y;"
+            "exec b;"
+        "ret;"
+    "endproc;"
+
+    "proc d;"
+        "sub 0 b b;"
+        "sub 0 i i;"
+        "exec e;"
+        "sub 0 a a;"
+        "ret;"
+    "endproc;"
+
+    "proc c;"
+        "gre b 0 f;"
+        "ret;"
+    "endproc;"
+
+    "proc a;"
+        "create int e 0;"
+        "gre b 0 e;"
+        "if e;"
+            "exec e;"
+        "add e -1 e;"
+        "if e;"
+            "exec d;"
+
+        "print a;"
+        "ret;"
+    "endproc;"
+
+    "create int a;"
+    "create int s;"
+    "create int b;"
+    "create int i 0;"
+
+    "input a;"
+    "input b;"
+    "add b 0 i;"
+    "add a 0 s;"
+
+    "create int f 1;"
+    
+    "create int t;"
+    "gre b -1 t;"
+    "if t;"
+        "exec c;"
+
+    "if f;"
+        "exec a;"
+    
+    "add f -1 f;"
+    "if f;"
+        "print 0;"
+;
+
+How to run:
+1. Put the code variable into bython.cpp in the start
+2. Compile as C++
+3. Run

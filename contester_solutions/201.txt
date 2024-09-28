@@ -1,0 +1,17 @@
+Problem 201.
+Input a whole number and output it to console.
+
+Input: A number.
+Output: The same entered number.
+
+Solution
+string code = 
+    "create int a;"
+    "input a;"
+    "print a;"
+;
+
+How to run:
+1. Put the code variable into bython.cpp in the start
+2. Compile as C++
+3. Run
