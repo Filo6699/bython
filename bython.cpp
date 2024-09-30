@@ -15,6 +15,7 @@ string code =
 
 const int bsize = 5;
 unsigned char memory[1000];
+map<string, int> procedures;
 int stk[1024];
 int stkp = 0;
 bool skip = false;
@@ -91,13 +92,12 @@ float parse_float_arg(string argv) {
 
 void b_proc(int index, int argc, vector<string> &argv) {
     if (argc != 1) {
-        cout << "Usage of proc:\n- proc shmemoryslot";
+        cout << "Usage of proc:\n- proc procedurename";
         exit(1);
     }
 
+    procedures[argv[0]] = index;
     procdef = true;
-    int addr = (argv[0][0] - 'a') * bsize;
-    store_int(index, addr);
 }
 
 void b_exec(int argc, vector<string> &argv) {
@@ -110,8 +110,7 @@ void b_exec(int argc, vector<string> &argv) {
     skip = true;
     stk[stkp] = ori;
     stkp++;
-    int addr = (argv[0][0] - 'a') * bsize;
-    ori = get_int(addr);
+    ori = procedures[argv[0]];
 }
 
 void b_ret(int argc, vector<string> &argv) {
