@@ -352,7 +352,11 @@ string stripLine(const string& line) {
 void interpretate(string &line, int length, int orin) {
     line = stripLine(line);
 
-    if (length == 0) {
+    if (line.size() == 0) {
+        return;
+    }
+
+    if (line.size() > 1 && line[0] == '/' && line[0] == line[1]) {
         return;
     }
 

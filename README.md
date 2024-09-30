@@ -20,6 +20,7 @@ Many features are absent, it is intended. For example, multiplication was a feat
 - [ ] else
 - [ ] loops
 - [ ] functions
+- [x] comments
 - [x] procedures
 - [ ] < <= == >=
 - [x] >

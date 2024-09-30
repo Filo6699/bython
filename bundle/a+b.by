@@ -2,7 +2,7 @@ proc sum
     add q w q
     ret
 endproc
-
+// comment
 create int q
 create int w
 
