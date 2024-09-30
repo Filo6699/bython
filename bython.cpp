@@ -245,7 +245,7 @@ void b_gre(int argc, vector<string> &argv) {
         float b = parse_float_arg(argv[1]);
         float result = a > b;
 
-        store_float(result, store_addr);
+        store_int(result, store_addr);
     }
 }
 
