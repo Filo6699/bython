@@ -16,7 +16,7 @@ string code =
 const int bsize = 5;
 unsigned char memory[1000];
 map<string, int> procedures;
-int stk[1024];
+int stk[16384];
 int stkp = 0;
 bool skip = false;
 bool procdef = false;
