@@ -10,6 +10,43 @@ bool DEBUG = 0;
 bool MEMORY_MAP = 0;
 
 string code =
+    // Variable names (important)
+    // The first row of the keyboard is used as arguments (and output) to "functions": qwertyuiop
+    // The second row is used by "functions": asdfghjkl
+    // The third row is for the program: zxcvbnm
+    // "function" is a procedure that is working with data from first row
+    // Good luck!
+
+    // Absolute value of `q` .
+    // input: q (int or float)
+    // temp values: a
+    // output: q (int or float)
+    "proc std_abs;"
+        "create int a;"
+        "gre 0 q a;"
+        "if a;"
+            "sub 0 q q;"
+        "ret;"
+    "endproc;"
+
+    // Modulo of `q` divided by `w`.
+    // Works only if w < q.
+    // Warning: will cause stack overflow if (w * 16384) > q.
+    // input: q, w (int or float)
+    // temp values: a
+    // output: q (int or float)
+    // output: q = -1 if w is 0
+    "proc std_modulo;"
+        "create int a;"
+        "gre w q a;"
+        "if a;"
+            "ret;"
+        "sub q w q;"
+        "exec std_modulo;"
+        "ret;"
+    "endproc;"
+
+    // Your code
     "print Hello, world!;"
 ;
 
