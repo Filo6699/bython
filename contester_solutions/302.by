@@ -1,0 +1,60 @@
+// Absolute value of `q` .
+// input: q (int or float)
+// output: q (int or float)
+proc std_abs
+    create int a
+    gre 0 q a
+    if a
+        sub 0 q q
+    ret
+endproc
+
+// Code
+proc path_a
+    add z z z
+    add x x x
+    add c c c
+    ret
+endproc
+
+proc path_b
+    add 0 z q
+    exec std_abs
+    add 0 q z
+
+    add 0 x q
+    exec std_abs
+    add 0 q x
+    
+    add 0 c q
+    exec std_abs
+    add 0 q c
+    ret
+endproc
+
+create float z
+create float x
+create float c
+create int v 0
+create int b 0
+
+input z
+input x
+input c
+
+gre x c v
+gre z x b
+add v b v
+gre 1 v b
+gre 1 b v
+
+if b
+    exec path_a
+if v
+    exec path_b
+
+print z
+print   
+print x
+print   
+print c

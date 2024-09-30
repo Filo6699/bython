@@ -234,19 +234,21 @@ void b_gre(int argc, vector<string> &argv) {
         }
     }
 
-    if (t1 == t2 && t1 == 'i') {
-        int a = parse_int_arg(argv[0]);
-        int b = parse_int_arg(argv[1]);
-        int result = a > b;
-
-        store_int(result, store_addr);
+    float a, b;
+    if (t1 == 'i') {
+        a = parse_int_arg(argv[0]);
     } else {
-        float a = parse_float_arg(argv[0]);
-        float b = parse_float_arg(argv[1]);
-        float result = a > b;
-
-        store_int(result, store_addr);
+        a = parse_float_arg(argv[0]);
     }
+
+    if (t2 == 'i') {
+        b = parse_int_arg(argv[1]);
+    } else {
+        b = parse_float_arg(argv[1]);
+    }
+
+    int result = a > b;
+    store_int(result, store_addr);
 }
 
 void b_add(int argc, vector<string> &argv, bool sub = false) {
@@ -278,15 +280,24 @@ void b_add(int argc, vector<string> &argv, bool sub = false) {
         }
     }
 
+    float a, b;
+    if (t1 == 'i') {
+        a = parse_int_arg(argv[0]);
+    } else {
+        a = parse_float_arg(argv[0]);
+    }
+
+    if (t2 == 'i') {
+        b = parse_int_arg(argv[1]) * -(sub * 2 - 1);
+    } else {
+        b = parse_float_arg(argv[1]) * -(sub * 2 - 1);
+    }
+
     if ((t1 == 'i') && (t2 == 'i')) {
-        int a = parse_int_arg(argv[0]);
-        int b = parse_int_arg(argv[1]) * -(sub * 2 - 1);
         int result = a + b;
 
         store_int(result, store_addr);
     } else {
-        float a = parse_float_arg(argv[0]);
-        float b = parse_float_arg(argv[1]) * -(sub * 2 - 1);
         float result = a + b;
 
         store_float(result, store_addr);

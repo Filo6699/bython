@@ -1,0 +1,63 @@
+// Variable names (important)
+// The first row of the keyboard is used as arguments (and output) to 'functions': qwertyuiop
+// The second row is used by 'functions': asdfghjkl
+// The third row is for the program: zxcvbnm
+// 'function' is a procedure that is working with data from first row
+// Good luck!
+
+// Absolute value of `q` .
+// input: q (int or float)
+// output: q (int or float)
+proc std_abs
+    create int a
+    gre 0 q a
+    if a
+        sub 0 q q
+    ret
+endproc
+
+// Modulo of `q` divided by `w`.
+// Works only if w < q.
+// Warning: will cause stack overflow if (w * 16384) > q.
+// input: q, w (int or float)
+// output: q (int or float)
+// output: q = -1 if w <= 0
+proc std_modulo
+    create int a
+
+    gre 1 w a
+    if a
+        add -1 0 q
+    if a
+        ret
+
+    gre w q a
+    if a
+        ret
+    
+    sub q w q
+    exec std_modulo
+    ret
+endproc
+
+// Checks if 2 numbers are equal
+// input: q, w (int or float)
+// output: q (int: 0 / 1)
+proc std_eq
+    create int a;
+
+    gre q w a
+    if a
+        add 0 0 q
+    if a
+        ret
+
+    gre w q a
+    if a
+        add 0 0 q
+    if a
+        ret
+    
+    add 0 1 q
+    ret
+endproc

@@ -1,0 +1,18 @@
+create float x
+create float y
+create float z
+
+input x
+input y
+input z
+
+gre z y z
+gre y x y
+add y z x
+gre x 1 y
+gre 2 x x
+
+if y
+    print YES
+if x
+    print NO
