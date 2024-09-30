@@ -10,7 +10,7 @@ bool DEBUG = 0;
 bool MEMORY_MAP = 0;
 
 string code =
-    "print Hello, world!;"
+    <REPLACE>
 ;
 
 const int bsize = 5;

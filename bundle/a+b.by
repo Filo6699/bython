@@ -1,0 +1,14 @@
+proc sum
+    add q w q
+    ret
+endproc
+
+create int q
+create int w
+
+input q
+input w
+
+exec sum
+
+print q

@@ -31,10 +31,6 @@ Many features are absent, it is intended. For example, multiplication was a feat
 - [ ] Bitshift to left
 - [x] Supports trans rights
 
-## How to use
-
-no idea
-
 ## Example
 
 ```
@@ -42,4 +38,14 @@ string code =
     "print Hello, world!;"
 ;
 ```
-Prints hello world. More examples in `contester_solutions` folder.
+
+## Advanced usage
+
+You can write Bython in .by files.
+Use [bython-bint](https://github.com/Filo6699/bython-bint) for syntax highlighting.
+Compile and use bundle.cpp to make a .cpp file with everything. (and upload to contester) 
+
+Command that i use:
+```shell
+./bundle a+b.by out.cpp && g++ out.cpp && ./a.out && rm out.cpp && rm a.out
+```
